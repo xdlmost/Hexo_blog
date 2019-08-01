@@ -1,0 +1,15 @@
+<% if (site.categories && site.categories.length){ %>
+
+<div class="widget-wrap sidebar-categories">
+    <h2> <%- __("category") %></h2>
+    <div class="widget">
+            <ul class="nav ">
+              <% site.categories.forEach(function(cat){ %>
+            <li>
+              <a href="<%= url_for(cat.path) %>"><%= cat.name %> (<%= cat.length  %>)</a>
+            </li>
+              <% }); %>
+            </ul>
+    </div>
+</div>
+<% } %>

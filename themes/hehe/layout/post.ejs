@@ -1,0 +1,14 @@
+<div class="container">
+    <ul class="breadcrumb">
+      <li><a href="/"><%- __("home") %></a></li>
+      <li><a href="<%= theme.menu ? theme.menu.blog : '/archives/' %>"><%- __("blog") %></a></li>
+      <li class="active"><%- post.title %></li>
+    </ul>
+    <section id="main">
+      <%- partial('_partial/post/title', {class_name: 'article-title', post: page,
+      index: false}) %>
+      <%- partial('_partial/article', {post: page, index: false}) %>
+    </section>
+</div>
+
+<%- page.content %>
