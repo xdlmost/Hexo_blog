@@ -1,4 +1,12 @@
 <div class="container">
-
+  <ul class="breadcrumb">
+    <li><a href="/"><%= __("home") %></a></li>
+    <li><a href="/archives/"><%= __("blog") %></a></li>
+    <li class="active"><%= __("tags") %>: <%- page.tag %></li>
+  </ul>
+<section id="main">
+  <h1><%= __("tags") %>: <%- page.tag %></h1>
+  <%- partial('_partial/archive', {pagination: config.tag, index: true}) %>
+</section>
 </div>
 

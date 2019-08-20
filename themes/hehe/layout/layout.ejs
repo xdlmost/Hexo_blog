@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <%- partial('_partial/head') %>
-  <body>
-  <%- partial('_partial/header') %>
-  <div class="main">
-    <%- body %>
-    <%- partial('_partial/footer') %>
-  </div>
-  <%- partial('_partial/jstail') %>
-  </body>
+<%- partial('_partial/head') %>
+<body class="corporate">
+  <%- partial('_partial/header', null, { path: path }) %>
+  <%- body %>
+  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/scripts') %>
+</body>
 </html>

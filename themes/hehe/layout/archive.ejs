@@ -1,1 +1,10 @@
-<%- partial('_widget/archive', {pagination: config.archive, index: false}) %>
+<div class="container">
+  <ul class="breadcrumb">
+    <li><a href="/"><%= __("home") %></a></li>
+    <li class="active"><%= __("blog") %></li>
+  </ul>
+<div id="main">
+  <h1><%= __("blog") %></h1>
+  <%- partial('_partial/archive', {pagination: config.archive, index: false}) %>
+</div>
+</div>

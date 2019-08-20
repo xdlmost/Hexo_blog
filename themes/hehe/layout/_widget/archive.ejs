@@ -1,16 +1,8 @@
-<div class="container">
-    <ul class="breadcrumb" style="background: white">
-      <li><a href="/"><%- __("home") %></a></li>
-      <li class="active"><%- __("blog") %></li>
-    </ul>
-  <div id="main">
-      <div class="row">
-        <div class="col-md-9 col-sm-9 blog-posts">
-              <%- partial('_partial/archive', {pagination: config.per_page, index: false}) %>
-        </div>
-        <div class="col-md-3 col-sm-3 blog-sidebar">
-              <%- partial('_partial/sidebar') %>
-        </div>
+<% if (site.posts.length){ %>
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <%- list_archives() %>
     </div>
   </div>
-</div>
+<% } %>

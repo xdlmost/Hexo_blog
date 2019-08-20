@@ -1,33 +1,59 @@
-<footer role="contentinfo">
-        <div class="container">
-            <div class="row">
-                <div class="left col-md-7">
-                    <ul class="links">
-                        <li>
-                            <span class="message">Hello from Seattle.</span>
-                        </li>
-                        <li>
-                            <a href="https://go.microsoft.com/fwlink/?LinkID=533687" onclick="followOnTwitter()" role="button" tabindex="0">Follow @code</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right col-md-5">
-                    <ul class="links">
-                        <li><a id="footer-support-link" href="https://support.microsoft.com/en-us/getsupport?wf=0&amp;tenant=ClassicCommercial&amp;oaspworkflow=start_1.0.0.0&amp;locale=en-us&amp;supportregion=en-us&amp;pesid=16064&amp;ccsid=636196895839595242" target="_blank">Support</a></li>
-                        <li><a id="footer-privacy-link" href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank">Privacy</a></li>
-                        <li><a id="footer-terms-link" href="https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx" target="_blank">Terms of Use</a></li>
-                        <li><a id="footer-license-link" href="/License">License</a></li>
-                    </ul>
-                    <div class="copyright">
-                        <a id="footer-microsoft-link" class="logo" href="https://www.microsoft.com">
-                            <img class="microsoft-logo" src="/assets/images/microsoft-logo.png" height="20" alt="Microsoft homepage">
-                            <img class="microsoft-logo-inverted" src="/assets/images/microsoft-logo-inverted.png" height="20" alt="Microsoft homepage">
-                        </a>
-                        <span>© 2019 <span itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
-    <span itemprop="name">Microsoft</span></span>
-                        </span>
-                    </div>
-                </div>
-            </div>
+  <!-- BEGIN PRE-FOOTER -->
+    <div class="pre-footer">
+      <div class="container">
+        <div class="row">
+          <!-- BEGIN BOTTOM ABOUT BLOCK -->
+          <div class="col-md-4 col-sm-6 pre-footer-col">
+            <h2><%- __("about") %></h2>
+            <p><%- theme.about %></p>
+          </div>
+          <!-- END BOTTOM ABOUT BLOCK -->
+
+          <!-- BEGIN BOTTOM CONTACTS -->
+          <div class="col-md-4 col-sm-6 pre-footer-col">
+            <h2><%- __("contact") %></h2>
+            <address class="margin-bottom-40">
+              <%= theme.address_1 %><br>
+              <% if (theme.phone) { %>
+              Phone: <%= theme.phone %><br>
+              <% }%>
+              <% if (theme.qq) { %>
+                QQ:<a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=<%= theme.qq %>" target="class"><%= theme.qq %></a> <br>
+              <% }%>
+              Email: <a href="mailto:<%= theme.email %>"><%= theme.email %></a><br>
+            </address>
+          </div>
+          <!-- END BOTTOM CONTACTS -->
+
+	<% if (theme.twitter_widget_id){ %>
+          <!-- BEGIN TWITTER BLOCK --> 
+          <div class="col-md-4 col-sm-6 pre-footer-col">
+
+	  <a data-tweet-limit="1" class="twitter-timeline"
+	  href="https://twitter.com/<%= theme.twitter_username %>"
+	  data-widget-id="<%= theme.twitter_widget_id %>">Tweets by @<%=
+	  theme.twitter_username %></a>
+
+          </div>
+          <!-- END TWITTER BLOCK -->
+	<% } %>
         </div>
-    </footer>
+      </div>
+    </div>
+    <!-- END PRE-FOOTER -->
+
+    <!-- BEGIN FOOTER -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <!-- BEGIN COPYRIGHT -->
+          <div class="col-md-6 col-sm-6 padding-top-10">
+                  &copy; <%= date(new Date(), 'YYYY') %> <%= config.title %><br>
+ <a href="javascript:;">Privacy Policy</a> | <a href="javascript:;">Terms of Service</a>
+          </div>
+          <!-- END COPYRIGHT -->
+	  <%- partial('_partial/social') %>
+        </div>
+      </div>
+    </div>
+    <!-- END FOOTER -->

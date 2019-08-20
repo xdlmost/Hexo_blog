@@ -6,12 +6,12 @@ tweets: 推文
 prev: 上一页
 next: 下一页
 comment: 留言
-archive_a: 归档
+archive_a: 呵呵大王的博客
 archive_b: 归档：%s
 page: 第 %d 页
 recent_posts: 最新文章
-newer: Newer
-older: Older
+newer: 下一篇
+older: 上一篇
 share: Share
 powered_by: Powered by
 rss_feed: RSS Feed
@@ -20,5 +20,8 @@ tag: 标签
 
 home: 首页
 blog: 博客
-about: 关于我
+about: 关于
 tools: 工具箱
+excerpt_link: 阅读全文
+contact: 联系我
+post: 文章
