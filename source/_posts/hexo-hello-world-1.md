@@ -4,12 +4,12 @@ date: 2019-07-08 13:31:41
 description: Hexo新手教程，使用Hexo快速且高效的搭建博客。本文包含了hexo简介、并对hexo、hexo-cli安装进行了详细讲解。呵呵大王的博客--积累与分享。
 keywords: Hexo安装、heco-cli、hexo教程
 category: Hexo
-tags: hehe
-lede: hehe
-thumbnail: https://upload-images.jianshu.io/upload_images/9738230-621ba8adfef7abf0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+tags: Hexo
+lede: Hexo是一个快速、简洁且高效的静态博客框架，我们一起开安装使用Hexo。
+thumbnail: /post_img/Hexo.jpg
 ---
 ## Hexo简介
-**Hexo**是一个快速、简洁且高效的博客框架。Hexo 使用**Markdown**(或其他渲染引擎）解析文章，在几秒内，即可利用丰富多彩的主题生成静态网页。
+**Hexo**是一个快速、简洁且高效的静态博客框架。Hexo 使用**Markdown**(或其他渲染引擎）解析文章，在几秒内，即可利用丰富多彩的主题生成静态网页。
 ## 为什么使用Hexo
 **Hexo**是基于nodejs的静态博客框架。在动态网页大行其道的时代，为什么我们还要使用静态博客呢？本人是基于以下的原因选择了静态博客。
 * 更加易于SEO。

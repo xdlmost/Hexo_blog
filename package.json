@@ -21,6 +21,7 @@
     "hexo-server": "^0.3.3"
   },
   "devDependencies": {
-    "hexo-cli": "^2.0.0"
+    "hexo-cli": "^2.0.0",
+    "hexo-generator-feed": "^1.2.2"
   }
 }
